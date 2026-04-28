@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>My Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <h1>Stella Kyriazi</h1>
+  <p>Junior Web Developer</p>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I'm a junior web developer focused on building clean and responsive websites 
+    using HTML, CSS and JavaScript.
+  </p>
+</section>
+
+<!-- FEATURED PROJECT (ΞΕΧΩΡΙΣΤΟ) -->
+<section class="featured-project">
+
+  <div class="featured-container">
+
+    <!-- LEFT -->
+    <div class="featured-image">
+
+      <!-- MAIN IMAGE (fixed frame) -->
+      <div class="main-image">
+        <img id="main-image" src="images/unreal.png" alt="Game">
+        <div class="image-overlay">
+            <h3>The Journalist</h3>
+        </div>
+      </div>
+
+      <!-- THUMBNAILS -->
+      <div class="thumbnails">
+        <img src="images/unreal.png" class="active" onclick="changeImage(this)">
+        <img src="images/island.png" onclick="changeImage(this)">
+        <img src="images/smile.png" onclick="changeImage(this)">
+        <img src="images/door.png" onclick="changeImage(this)">
+        <img src="images/door_key.png" onclick="changeImage(this)">
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="featured-content">
+      <p class="tag">FEATURED PROJECT</p>
+
+      <h2>The Journalist: The Triangle of Mysteries</h2>
+
+      <p class="role">
+         Role: Game Developer / Designer
+      </p>
+
+      <p class="description">
+        A 3D game developed in Unreal Engine for my diploma thesis.
+        The game features exploration, puzzles and challenges
+      </p>
+
+      <div class="tech">
+        <span>Unreal Engine 5</span>
+        <span>Blueprints</span>
+        <span>C++</span>
+      </div>
+
+      <div class="buttons">
+        <a href="https://www.youtube.com/watch?v=I7K-D2m6g_Y" target="_blank" class="btn-primary">
+          Watch Trailer
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Other Projects</h2>
+
+  <div class="projects-container">
+
+    <div class="project">
+      <h3>Project 1</h3>
+      <p>Short description</p>
+    </div>
+
+    <div class="project">
+      <h3>Project 2</h3>
+      <p>Short description</p>
+    </div>
+
+    <div class="project">
+      <h3>Project 3</h3>
+      <p>Short description</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: kyriazistella@gmail.com</p>
+</section>
+
+<script>
+function changeImage(element) {
+  const mainImage = document.getElementById("main-image");
+
+  mainImage.classList.add("fade-out");
+
+  setTimeout(() => {
+    mainImage.src = element.src;
+
+    setTimeout(() => {
+      mainImage.classList.remove("fade-out");
+    }, 50);
+
+  }, 300);
+
+  const thumbs = document.querySelectorAll(".thumbnails img");
+  thumbs.forEach(img => img.classList.remove("active"));
+  element.classList.add("active");
+}
+</script>
+
+</body>
+</html>
