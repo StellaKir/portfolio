@@ -12,14 +12,23 @@
 <body>
 
 <header>
-  <h1>Stella Kyriazi</h1>
-  <p>Junior Web Developer</p>
+  <div class="nav-container">
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <!-- LEFT: LOGO + NAME -->
+    <div class="brand">
+      <img src="images/logo.png" alt="Logo">
+      <h1>Stella Kyriazi</h1>
+      <p><span id="typing-text"></span></p>
+    </div>
+
+    <!-- RIGHT: NAV -->
+    <nav>
+      <a href="#about">About</a>
+      <a href="#featured">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
 </header>
 
 <!-- ABOUT -->
@@ -31,29 +40,35 @@
   </p>
 </section>
 
-<!-- FEATURED PROJECT (ΞΕΧΩΡΙΣΤΟ) -->
-<section class="featured-project">
+<!-- FEATURED PROJECT -->
+<section id="featured" class="featured-project">
 
   <div class="featured-container">
 
     <!-- LEFT -->
     <div class="featured-image">
 
-      <!-- MAIN IMAGE (fixed frame) -->
+      <!-- MAIN IMAGE -->
       <div class="main-image">
-        <img id="main-image" src="images/unreal.png" alt="Game">
+        <img id="main-image" src="images/unreal.png" alt="Game preview">
+
+        <!-- OVERLAY TEXT -->
         <div class="image-overlay">
-            <h3>The Journalist</h3>
+          <h3>The Journalist</h3>
+          <p>Unreal Engine Game</p>
         </div>
       </div>
 
       <!-- THUMBNAILS -->
       <div class="thumbnails">
-        <img src="images/unreal.png" class="active" onclick="changeImage(this)">
-        <img src="images/island.png" onclick="changeImage(this)">
-        <img src="images/smile.png" onclick="changeImage(this)">
-        <img src="images/door.png" onclick="changeImage(this)">
-        <img src="images/door_key.png" onclick="changeImage(this)">
+        <img src="images/unreal.png" class="active" onclick="changeImage(this)" alt="Main scene">
+        <img src="images/island.png" onclick="changeImage(this)" alt="Island scene">
+        <img src="images/smile.png" onclick="changeImage(this)" alt="Character scene">
+        <img src="images/door.png" onclick="changeImage(this)" alt="Door scene">
+        <img src="images/door_key.png" onclick="changeImage(this)" alt="Puzzle scene">
+        <img src="images/cage.png" onclick="changeImage(this)" alt="Cage scene">
+        <img src="images/room.png" onclick="changeImage(this)" alt="Room scene">
+        <img src="images/desk.png" onclick="changeImage(this)" alt="desk scene">
       </div>
 
     </div>
@@ -65,12 +80,11 @@
       <h2>The Journalist: The Triangle of Mysteries</h2>
 
       <p class="role">
-         Role: Game Developer / Designer
+        Role: Game Developer / Designer
       </p>
 
       <p class="description">
-        A 3D game developed in Unreal Engine for my diploma thesis.
-        The game features exploration, puzzles and challenges
+        A story-driven 3D game developed in Unreal Engine, where the player explores mysterious environments, solves puzzles and uncovers hidden secrets.
       </p>
 
       <div class="tech">
@@ -80,13 +94,16 @@
       </div>
 
       <div class="buttons">
-        <a href="https://www.youtube.com/watch?v=I7K-D2m6g_Y" target="_blank" class="btn-primary">
+        <a href="https://www.youtube.com/watch?v=I7K-D2m6g_Y" 
+           target="_blank" 
+           class="btn-primary">
           Watch Trailer
         </a>
       </div>
     </div>
 
   </div>
+
 </section>
 
 <!-- PROJECTS -->
@@ -119,6 +136,7 @@
   <p>Email: kyriazistella@gmail.com</p>
 </section>
 
+
 <script>
 function changeImage(element) {
   const mainImage = document.getElementById("main-image");
@@ -139,6 +157,50 @@ function changeImage(element) {
   element.classList.add("active");
 }
 </script>
+
+
+<!--active menu-->
+<script>
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
+<!--typing effect-->
+<script>
+const text = "Junior Software Developer";
+let index = 0;
+
+function typeEffect() {
+  if (index < text.length) {
+    document.getElementById("typing-text").textContent += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, 150); // speed
+  }
+}
+
+window.addEventListener("load", typeEffect);
+</script>
+
 
 </body>
 </html>
