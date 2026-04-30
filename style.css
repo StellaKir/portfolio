@@ -1,16 +1,22 @@
 :root {
   --bg: #0f172a;
   --primary: #111827;
-  --accent: #22c55e;
+  --accent: #4fc3f7;
   --text: #e5e7eb;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   background: var(--bg);
   color: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
 }
 
 /* HEADER */
@@ -88,7 +94,7 @@ header p {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
-   width: 220px;
+  width: 220px;
 }
 
 .brand-text h1 {
@@ -100,7 +106,7 @@ header p {
 .brand-text p {
   font-size: 0.9rem;
   margin: 0;
-  color: #59da9e;
+  color: var(--accent);
   letter-spacing: 0.9px;
 }
 
@@ -256,7 +262,7 @@ p {
   border-radius: 20px;
   transition: all 0.4s ease;
   border: 1px solid var(--accent);
-  box-shadow: 0 0 10px #22c55e;
+  box-shadow: 0 0 10px var(--accent);
 }
 
 .image-badge {
