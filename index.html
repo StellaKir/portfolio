@@ -61,17 +61,20 @@
       </h2>
 
       <p>
-        I'm a junior developer passionate about interactive experiences — 
-        from immersive 3D games in Unreal Engine to clean, responsive websites.
+        I’m a junior web software developer with a solid foundation in Computer Science and problem-solving.
+        I focus on building responsive, user-friendly web applications and turning ideas into functional digital solutions.
+        With experience across both development and complex projects, I’m constantly growing and refining my skills.
       </p>
 
       <div class="about-skills">
-        <span>Unreal Engine 5</span>
-        <span>Blueprints</span>
-        <span>C++</span>
-        <span>HTML</span>
-        <span>CSS</span>
+        <span>HTML5</span>
+        <span>CSS3</span>
         <span>JavaScript</span>
+        <span>MySQL</span>
+        <span>Python</span>
+        <span>C++</span>
+        <span>Responsive Web Design</span>
+        <span>Unreal Engine 5</span>
       </div>
 
     </div>
@@ -145,6 +148,13 @@
         <span>C++</span>
       </div>
 
+      <div class="project-learnings">
+        <h4>Challenges & Learnings</h4>
+        <p>
+        Implementing dynamic puzzle logic using Blueprints and managing performance optimization for complex 3D environments helped me improve problem-solving and system design skills.
+        </p>
+      </div>
+
       <div class="buttons">
         <a href="https://www.youtube.com/watch?v=I7K-D2m6g_Y" 
            target="_blank" 
@@ -158,28 +168,64 @@
 
 </section>
 
+
+
 <!-- PROJECTS -->
 <section id="projects">
-  <h2>Other Projects</h2>
+  <div class="projects-grid">
 
-  <div class="projects-container">
-
-    <div class="project">
-      <h3>Project 1</h3>
-      <p>Short description</p>
+  <!-- PROJECT 1 -->
+  <div class="project-card">
+    <div class="project-image">
+      🌐
     </div>
 
-    <div class="project">
-      <h3>Project 2</h3>
-      <p>Short description</p>
-    </div>
+    <div class="project-content">
+      <h3>Project Name</h3>
+      <p>Short description of what this project does and what tech was used.</p>
 
-    <div class="project">
-      <h3>Project 3</h3>
-      <p>Short description</p>
+      <div class="project-tech">
+        <span>HTML</span>
+        <span>CSS</span>
+      </div>
     </div>
-
   </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project-card coming-card">
+  <div class="project-image coming">
+    <span>Coming Soon</span>
+  </div>
+
+  <div class="project-content">
+    <h3>JavaScript Project</h3>
+    <p>A new interactive web project is currently in progress.</p>
+
+    <div class="project-tech">
+      <span>JavaScript</span>
+      <span>API</span>
+    </div>
+  </div>
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="project-card coming-card">
+  <div class="project-image coming">
+    <span>Coming Soon</span>
+  </div>
+
+  <div class="project-content">
+    <h3>React Project</h3>
+    <p>A responsive front-end project will be added soon.</p>
+
+    <div class="project-tech">
+      <span>React</span>
+      <span>UI</span>
+    </div>
+  </div>
+  </div>
+
+</div>
 </section>
 
 
@@ -271,7 +317,7 @@ window.addEventListener("scroll", () => {
   let current = "";
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 120;
+    const sectionTop = section.offsetTop - 260;
 
     if (window.scrollY >= sectionTop) {
       current = section.getAttribute("id");
