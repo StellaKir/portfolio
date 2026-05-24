@@ -1,0 +1,564 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Space+Grotesk:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="nav-container">
+        <div class="brand">
+          <img src="images/logo.png" alt="Logo" />
+
+          <div class="brand-text">
+            <h1>Stella Kyriazi</h1>
+            <p><span id="typing-text"></span></p>
+          </div>
+        </div>
+
+        <nav class="nav-center">
+          <a href="#about">About</a>
+          <a href="#featured">Projects</a>
+          <a href="#contact">Contact</a>
+
+          <div class="mobile-buttons">
+            <a href="cv/Kyriazi_Stella_2026.pdf" download class="mobile-cv-btn">
+              Download CV
+            </a>
+
+            <a href="#contact" class="mobile-hire-btn"> Hire Me </a>
+          </div>
+        </nav>
+
+        <div class="nav-right">
+          <a href="cv/Kyriazi_Stella_2026.pdf" download class="cv-btn">
+            Download CV
+          </a>
+
+          <a href="#contact" class="hire-btn"> Hire Me </a>
+        </div>
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <div class="about-text">
+          <span class="about-tag">ABOUT ME</span>
+
+          <h1>Hi, I'm <span style="color: var(--accent)">Stella</span>!</h1>
+
+          <h2>
+            I build worlds,<br />
+            digital and virtual.
+          </h2>
+
+          <p>
+            I’m a junior web software developer with a solid foundation in
+            Computer Science and problem-solving. I focus on building
+            responsive, user-friendly web applications and turning ideas into
+            functional digital solutions. With experience across both
+            development and complex projects, I’m constantly growing and
+            refining my skills.
+          </p>
+
+          <div class="about-skills">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>MySQL</span>
+            <span>Python</span>
+            <span>C++</span>
+            <span>Responsive Web Design</span>
+            <span>Unreal Engine 5</span>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <img src="images/avatar.png" alt="Avatar" />
+
+          <div class="image-badge">Game Dev · Web Dev</div>
+        </div>
+      </div>
+
+      <section class="skills-section">
+        <div class="skills-header">
+          <span class="skills-tag">&lt;/&gt; MY SKILLS</span>
+          <h2>My Technical Skills</h2>
+          <p>Technologies I work with to bring ideas to life.</p>
+        </div>
+
+        <div class="keyboard-wrapper">
+          <div class="keyboard-glow"></div>
+
+          <div class="keyboard-grid">
+            <div class="skill-key">
+              <img src="images/html.png" alt="HTML" />
+              <span>HTML</span>
+
+              <div class="key-popup">
+                <h4>HTML</h4>
+                <p>Structure and semantic content for web pages.</p>
+              </div>
+            </div>
+
+            <div class="skill-key">
+              <img src="images/css.png" alt="CSS" />
+              <span>CSS</span>
+
+              <div class="key-popup">
+                <h4>CSS</h4>
+                <p>Styling, layouts and responsive design.</p>
+              </div>
+            </div>
+
+            <div class="skill-key">
+              <img src="images/javascript.png" alt="JavaScript" />
+              <span>JavaScript</span>
+
+              <div class="key-popup">
+                <h4>JavaScript</h4>
+                <p>Interactivity and dynamic web functionality.</p>
+              </div>
+            </div>
+
+            <div class="skill-key">
+              <img src="images/react.png" alt="React" />
+              <span>React</span>
+
+              <div class="key-popup">
+                <h4>React</h4>
+                <p>Reusable components and modern UI development.</p>
+              </div>
+            </div>
+
+            <div class="skill-key">
+              <img src="images/python.png" alt="Python" />
+              <span>Python</span>
+
+              <div class="key-popup">
+                <h4>Python</h4>
+                <p>Logic, scripting and problem solving.</p>
+              </div>
+            </div>
+
+            <div class="skill-key">
+              <img src="images/mysql.png" alt="MySQL" />
+              <span>MySQL</span>
+
+              <div class="key-popup">
+                <h4>MySQL</h4>
+                <p>Database queries and data management.</p>
+              </div>
+            </div>
+
+            <div class="skill-key">
+              <img src="images/C++.png" alt="Skill" />
+              <span>C++</span>
+
+              <div class="key-popup">
+                <h4>C++</h4>
+                <p>
+                  Object-oriented programming and performance-focused software
+                  development.
+                </p>
+              </div>
+            </div>
+
+            <div class="skill-key">
+              <img src="images/unreal_logo.png" alt="Unreal Engine" />
+              <span>Unreal Engine</span>
+
+              <div class="key-popup">
+                <h4>Unreal Engine 5</h4>
+                <p>
+                  3D game development, interactive systems and immersive
+                  environments.
+                </p>
+              </div>
+            </div>
+
+            <div class="skill-key">
+              <img src="images/Blender.png" alt="Skill" />
+              <span>Blender</span>
+
+              <div class="key-popup">
+                <h4>Blender</h4>
+                <p>
+                  3D modeling, asset editing and environment creation for games.
+                </p>
+              </div>
+            </div>
+
+            <div class="skill-key">
+              <img src="images/github.png" alt="Skill" />
+              <span>GitHub</span>
+
+              <div class="key-popup">
+                <h4>GitHub</h4>
+                <p>
+                  Version control, project collaboration and code management.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="projects-intro">
+      <span class="projects-tag">PROJECTS</span>
+
+      <h2>What I've Built</h2>
+
+      <p>
+        From immersive game environments to modern web applications, these
+        projects showcase my passion for development, design and problem
+        solving.
+      </p>
+    </section>
+
+    <section id="featured" class="featured-project">
+      <div class="featured-container">
+        <div class="featured-image">
+          <div class="main-image">
+            <img id="main-image" src="images/unreal.png" alt="Game preview" />
+
+            <div class="image-overlay">
+              <h3>The Journalist</h3>
+              <p>Unreal Engine Game</p>
+            </div>
+          </div>
+
+          <div class="thumbnails">
+            <img
+              src="images/unreal.png"
+              class="active"
+              onclick="changeImage(this)"
+              alt="Main scene"
+            />
+            <img
+              src="images/island.png"
+              onclick="changeImage(this)"
+              alt="Island scene"
+            />
+            <img
+              src="images/smile.png"
+              onclick="changeImage(this)"
+              alt="Character scene"
+            />
+            <img
+              src="images/door.png"
+              onclick="changeImage(this)"
+              alt="Door scene"
+            />
+            <img
+              src="images/door_key.png"
+              onclick="changeImage(this)"
+              alt="Puzzle scene"
+            />
+            <img
+              src="images/cage.png"
+              onclick="changeImage(this)"
+              alt="Cage scene"
+            />
+            <img
+              src="images/room.png"
+              onclick="changeImage(this)"
+              alt="Room scene"
+            />
+            <img
+              src="images/desk.png"
+              onclick="changeImage(this)"
+              alt="Desk scene"
+            />
+          </div>
+        </div>
+
+        <div class="featured-content">
+          <p class="tag">FEATURED PROJECT</p>
+
+          <h2>The Journalist: The Triangle of Mysteries</h2>
+
+          <p class="role">Role: Game Developer / Designer</p>
+
+          <p class="description">
+            A story-driven 3D game developed in Unreal Engine, where the player
+            explores mysterious environments, solves puzzles and uncovers hidden
+            secrets.
+          </p>
+
+          <div class="tech">
+            <span>Unreal Engine 5</span>
+            <span>Blueprints</span>
+            <span>C++</span>
+          </div>
+
+          <div class="project-learnings">
+            <h4>Challenges & Learnings</h4>
+            <p>
+              Implementing dynamic puzzle logic using Blueprints and managing
+              performance optimization for complex 3D environments helped me
+              improve problem-solving and system design skills.
+            </p>
+          </div>
+
+          <div class="buttons">
+            <a
+              href="https://www.youtube.com/watch?v=I7K-D2m6g_Y"
+              target="_blank"
+              class="btn-primary"
+            >
+              Watch Trailer
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">🌐</div>
+
+          <div class="project-content">
+            <h3>Project Name</h3>
+            <p>
+              Short description of what this project does and what tech was
+              used.
+            </p>
+
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card coming-card">
+          <div class="project-image coming">
+            <span>Coming Soon</span>
+          </div>
+
+          <div class="project-content">
+            <h3>JavaScript Project</h3>
+            <p>A new interactive web project is currently in progress.</p>
+
+            <div class="project-tech">
+              <span>JavaScript</span>
+              <span>API</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card coming-card">
+          <div class="project-image coming">
+            <span>Coming Soon</span>
+          </div>
+
+          <div class="project-content">
+            <h3>React Project</h3>
+            <p>A responsive front-end project will be added soon.</p>
+
+            <div class="project-tech">
+              <span>React</span>
+              <span>UI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <div class="contact-text reveal-left">
+          <span class="contact-tag">GET IN TOUCH</span>
+
+          <h2>
+            Open to<br />
+            <span>collaborations.</span>
+          </h2>
+
+          <p>
+            Whether it's a game project, a web build, or just a chat — I'd love
+            to connect. Currently available for junior roles and freelance
+            projects.
+          </p>
+
+          <a href="mailto:kyriazistella@gmail.com" class="contact-btn">
+            Send a Message
+          </a>
+        </div>
+
+        <div class="contact-links reveal-right">
+          <a href="mailto:kyriazistella@gmail.com" class="contact-card">
+            <span>✉️</span>
+            <p>kyriazistella@gmail.com</p>
+          </a>
+
+          <a
+            href="https://github.com/StellaKir"
+            target="_blank"
+            class="contact-card"
+          >
+            <span>💻</span>
+            <p>github.com/StellaKir</p>
+          </a>
+
+          <a
+            href="https://linkedin.com/in/stella-kyriazi"
+            target="_blank"
+            class="contact-card"
+          >
+            <span>🔗</span>
+            <p>linkedin.com/in/stella-kyriazi</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function changeImage(element) {
+        const mainImage = document.getElementById("main-image");
+
+        mainImage.classList.add("fade-out");
+
+        setTimeout(() => {
+          mainImage.src = element.src;
+
+          setTimeout(() => {
+            mainImage.classList.remove("fade-out");
+          }, 50);
+        }, 300);
+
+        const thumbs = document.querySelectorAll(".thumbnails img");
+        thumbs.forEach((img) => img.classList.remove("active"));
+        element.classList.add("active");
+      }
+    </script>
+
+    <script>
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll("nav a");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 260;
+
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+
+    <script>
+      const text = "Junior Software Developer";
+      let index = 0;
+
+      function typeEffect() {
+        if (index < text.length) {
+          document.getElementById("typing-text").textContent +=
+            text.charAt(index);
+          index++;
+          setTimeout(typeEffect, 150);
+        }
+      }
+
+      window.addEventListener("load", typeEffect);
+    </script>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".nav-center");
+        menu.classList.toggle("active");
+      }
+
+      const mobileLinks = document.querySelectorAll(".nav-center a");
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          document.querySelector(".nav-center").classList.remove("active");
+        });
+      });
+    </script>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+
+        if (window.innerWidth <= 768) {
+          if (window.scrollY > 50) {
+            header.classList.add("move-up");
+          } else {
+            header.classList.remove("move-up");
+          }
+        }
+      });
+    </script>
+
+    <script>
+      const skillKeys = document.querySelectorAll(".skill-key");
+
+      skillKeys.forEach((key) => {
+        key.addEventListener("mousemove", (e) => {
+          const rect = key.getBoundingClientRect();
+
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const rotateX = ((y - centerY) / centerY) * -8;
+          const rotateY = ((x - centerX) / centerX) * 8;
+
+          key.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(6px)`;
+        });
+
+        key.addEventListener("mouseleave", () => {
+          key.style.transform = "rotateX(0deg) rotateY(0deg) translateY(0)";
+        });
+      });
+    </script>
+
+    <script>
+      const revealElements = document.querySelectorAll(
+        ".reveal-left, .reveal-right",
+      );
+
+      window.addEventListener("scroll", () => {
+        revealElements.forEach((element) => {
+          const elementTop = element.getBoundingClientRect().top;
+          const elementBottom = element.getBoundingClientRect().bottom;
+          const windowHeight = window.innerHeight;
+
+          if (elementTop < windowHeight - 100 && elementBottom > 100) {
+            element.classList.add("show");
+          } else {
+            element.classList.remove("show");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
