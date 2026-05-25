@@ -57,18 +57,20 @@
 
           <h1>Hi, I'm <span style="color: var(--accent)">Stella</span>!</h1>
 
-          <h2>
+          <h2 class="about-title">
             I build worlds,<br />
-            digital and virtual.
+            <span class="digital-word">digital</span>
+            and
+            <span class="virtual-word" data-text="virtual">virtual</span>.
           </h2>
 
           <p>
-            I’m a junior web software developer with a solid foundation in
-            Computer Science and problem-solving. I focus on building
-            responsive, user-friendly web applications and turning ideas into
-            functional digital solutions. With experience across both
-            development and complex projects, I’m constantly growing and
-            refining my skills.
+            I’m a junior developer passionate about creating modern, responsive
+            and user-focused digital experiences. With a background in Computer
+            Science and hands-on experience in both web development and
+            interactive projects, I enjoy turning ideas into clean, functional
+            and visually engaging applications while continuously expanding my
+            skills.
           </p>
 
           <div class="about-skills">
@@ -328,34 +330,82 @@
     <section id="projects">
       <div class="projects-grid">
         <div class="project-card">
-          <div class="project-image">🌐</div>
+          <div class="project-image">
+            <img src="images/mar-g-logo.png" alt="MAR-G Bags Website" />
+          </div>
 
           <div class="project-content">
-            <h3>Project Name</h3>
+            <h3>MAR-G Bags</h3>
+
             <p>
-              Short description of what this project does and what tech was
-              used.
+              A modern responsive landing page created for a handmade bags
+              brand, focused on elegant presentation, smooth animations and
+              clean user experience.
             </p>
 
             <div class="project-tech">
               <span>HTML</span>
               <span>CSS</span>
+              <span>Responsive Design</span>
+            </div>
+
+            <div class="project-buttons">
+              <a
+                href="https://mar-g.netlify.app/"
+                target="_blank"
+                class="project-btn live-btn"
+              >
+                Live Demo
+              </a>
+
+              <a
+                href="https://github.com/StellaKir/mar-g-bags"
+                target="_blank"
+                class="project-btn github-btn"
+              >
+                GitHub
+              </a>
             </div>
           </div>
         </div>
 
-        <div class="project-card coming-card">
-          <div class="project-image coming">
-            <span>Coming Soon</span>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/planoras-preview.png" alt="Planoras App" />
           </div>
 
           <div class="project-content">
-            <h3>JavaScript Project</h3>
-            <p>A new interactive web project is currently in progress.</p>
+            <h3>PlanorasApp</h3>
+
+            <p>
+              A responsive student planner web application built to help
+              students organize classes, manage schedules and track academic
+              tasks efficiently.
+            </p>
 
             <div class="project-tech">
+              <span>React</span>
+              <span>Vite</span>
               <span>JavaScript</span>
-              <span>API</span>
+              <span>CSS</span>
+            </div>
+
+            <div class="project-buttons">
+              <a
+                href="https://planorasapp.netlify.app/"
+                target="_blank"
+                class="project-btn live-btn"
+              >
+                Live Demo
+              </a>
+
+              <a
+                href="https://github.com/StellaKir"
+                target="_blank"
+                class="project-btn github-btn"
+              >
+                GitHub
+              </a>
             </div>
           </div>
         </div>
@@ -558,6 +608,22 @@
             element.classList.remove("show");
           }
         });
+      });
+    </script>
+
+    <script>
+      if (window.location.hash) {
+        history.replaceState(null, null, window.location.pathname);
+      }
+    </script>
+
+    <script>
+      window.addEventListener("load", () => {
+        if (window.location.hash) {
+          history.replaceState(null, null, window.location.pathname);
+        }
+
+        window.scrollTo(0, 0);
       });
     </script>
   </body>
