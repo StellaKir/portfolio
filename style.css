@@ -29,6 +29,148 @@ body {
   color: var(--text);
 }
 
+/* =========================
+   LOADING SCREEN
+========================= */
+
+.loader {
+  position: fixed;
+  inset: 0;
+
+  background: #020617;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999999;
+
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
+}
+
+.loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-content {
+  text-align: center;
+}
+
+.loader-content h1 {
+  font-size: 2.2rem;
+
+  color: white;
+
+  margin-bottom: 12px;
+
+  letter-spacing: 2px;
+
+  text-shadow:
+    0 0 15px rgba(79, 195, 247, 0.5),
+    0 0 35px rgba(79, 195, 247, 0.25);
+
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.loader-content p {
+  color: #94a3b8;
+
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  font-size: 0.75rem;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.75;
+
+    transform: scale(1.04);
+  }
+}
+
+/* =========================
+   SECTION DIVIDERS
+========================= */
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 0 auto;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(79, 195, 247, 0.5),
+    transparent
+  );
+
+  box-shadow: 0 0 12px rgba(79, 195, 247, 0.25);
+}
+
+/* =========================
+   CURSOR GLOW
+========================= */
+
+.cursor-glow {
+  position: fixed;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(79, 195, 247, 0.16) 0%,
+    rgba(79, 195, 247, 0.08) 35%,
+    transparent 70%
+  );
+
+  pointer-events: none;
+
+  transform: translate(-50%, -50%);
+
+  z-index: -1;
+
+  transition:
+    transform 0.08s linear,
+    opacity 0.3s ease;
+}
+
+/* =========================
+   SUBTLE BACKGROUND NOISE
+========================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.04) 1px,
+    transparent 1px
+  );
+
+  background-size: 4px 4px;
+  opacity: 0.12;
+
+  z-index: -0.5;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -53,6 +195,87 @@ p {
 section {
   padding: 100px 20px;
   scroll-margin-top: 100px;
+}
+
+/* =========================
+   BACKGROUND GLOW BLOBS
+========================= */
+
+.background-blobs {
+  position: fixed;
+  inset: 0;
+
+  overflow: hidden;
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+.blob {
+  position: absolute;
+
+  border-radius: 50%;
+  filter: blur(90px);
+
+  opacity: 0.35;
+
+  animation: blobFloat 12s ease-in-out infinite;
+}
+
+/* BLOB 1 */
+.blob-1 {
+  width: 320px;
+  height: 320px;
+
+  background: #4fc3f7;
+
+  top: 10%;
+  left: -80px;
+}
+
+/* BLOB 2 */
+.blob-2 {
+  width: 420px;
+  height: 420px;
+
+  background: #1d4ed8;
+
+  top: 45%;
+  right: -120px;
+
+  animation-delay: 4s;
+}
+
+/* BLOB 3 */
+.blob-3 {
+  width: 260px;
+  height: 260px;
+
+  background: #38bdf8;
+
+  bottom: -60px;
+  left: 40%;
+
+  animation-delay: 8s;
+}
+
+@keyframes blobFloat {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+
+  25% {
+    transform: translateY(-30px) translateX(20px) scale(1.05);
+  }
+
+  50% {
+    transform: translateY(20px) translateX(-25px) scale(0.95);
+  }
+
+  75% {
+    transform: translateY(-15px) translateX(30px) scale(1.08);
+  }
 }
 
 /* =========================
@@ -258,6 +481,61 @@ nav a.active::after {
   font-weight: 600;
 }
 
+/* CONTACT CTA DETAILS */
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 18px;
+  padding: 8px 14px;
+
+  background: rgba(79, 195, 247, 0.08);
+  border: 1px solid rgba(79, 195, 247, 0.3);
+  border-radius: 999px;
+
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+
+  background: #22c55e;
+  border-radius: 50%;
+
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+  animation: pulseDot 1.8s infinite;
+}
+
+.response-note {
+  margin-top: -8px;
+  margin-bottom: 25px;
+
+  color: #94a3b8;
+  font-size: 0.82rem;
+}
+
+@keyframes pulseDot {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.35);
+    opacity: 0.65;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 /* =========================
    ABOUT SECTION
 ========================= */
@@ -352,9 +630,9 @@ nav a.active::after {
 
   background-size: 200% auto;
 
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   animation: digitalGlow 4s linear infinite;
 
   text-shadow:
@@ -1080,6 +1358,61 @@ nav a.active::after {
   color: var(--text);
 }
 
+/* CONTACT CTA DETAILS */
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 18px;
+  padding: 8px 14px;
+
+  background: rgba(79, 195, 247, 0.08);
+  border: 1px solid rgba(79, 195, 247, 0.3);
+  border-radius: 999px;
+
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+
+  background: #22c55e;
+  border-radius: 50%;
+
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+  animation: pulseDot 1.8s infinite;
+}
+
+.response-note {
+  margin-top: -8px;
+  margin-bottom: 25px;
+
+  color: #94a3b8;
+  font-size: 0.82rem;
+}
+
+@keyframes pulseDot {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.35);
+    opacity: 0.65;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 /* =========================
    REVEAL ANIMATIONS
 ========================= */
@@ -1107,6 +1440,24 @@ nav a.active::after {
 /* MOBILE MENU BUTTONS */
 .mobile-buttons {
   display: none;
+}
+
+/* =========================
+   SCROLL PROGRESS BAR
+========================= */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 3px;
+  width: 0%;
+
+  background: linear-gradient(90deg, var(--accent), #ffffff);
+  box-shadow: 0 0 14px rgba(79, 195, 247, 0.8);
+
+  z-index: 9999;
 }
 
 /* =========================

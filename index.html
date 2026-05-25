@@ -13,6 +13,21 @@
   </head>
 
   <body>
+    <div class="cursor-glow"></div>
+    <div class="loader">
+      <div class="loader-content">
+        <h1>Stella Kyriazi</h1>
+
+        <p>Loading portfolio...</p>
+      </div>
+    </div>
+    <div class="background-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <div class="scroll-progress"></div>
     <header>
       <div class="nav-container">
         <div class="brand">
@@ -216,6 +231,8 @@
         </div>
       </section>
     </section>
+
+    <div class="section-divider"></div>
 
     <section class="projects-intro">
       <span class="projects-tag">PROJECTS</span>
@@ -428,27 +445,37 @@
       </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <section id="contact" class="contact-section">
       <div class="contact-container">
+        <!-- LEFT -->
         <div class="contact-text reveal-left">
           <span class="contact-tag">GET IN TOUCH</span>
 
+          <div class="availability-badge">
+            <span class="status-dot"></span>
+            Available for junior developer roles
+          </div>
+
           <h2>
-            Open to<br />
-            <span>collaborations.</span>
+            Let’s build<br />
+            <span>something together.</span>
           </h2>
 
           <p>
-            Whether it's a game project, a web build, or just a chat — I'd love
-            to connect. Currently available for junior roles and freelance
-            projects.
+            I’m currently open to junior frontend and software development
+            opportunities, freelance projects and creative collaborations.
           </p>
+
+          <p class="response-note">Usually responds within 24 hours.</p>
 
           <a href="mailto:kyriazistella@gmail.com" class="contact-btn">
             Send a Message
           </a>
         </div>
 
+        <!-- RIGHT -->
         <div class="contact-links reveal-right">
           <a href="mailto:kyriazistella@gmail.com" class="contact-card">
             <span>✉️</span>
@@ -625,6 +652,55 @@
 
         window.scrollTo(0, 0);
       });
+    </script>
+
+    <script>
+      const scrollProgress = document.querySelector(".scroll-progress");
+
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        scrollProgress.style.width = scrollPercent + "%";
+      });
+    </script>
+
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.querySelector(".loader");
+
+        setTimeout(() => {
+          loader.classList.add("hide");
+        }, 2000);
+      });
+    </script>
+
+    <script>
+      const cursorGlow = document.querySelector(".cursor-glow");
+
+      let mouseX = 0;
+      let mouseY = 0;
+
+      let currentX = 0;
+      let currentY = 0;
+
+      window.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      function animateCursor() {
+        currentX += (mouseX - currentX) * 0.08;
+        currentY += (mouseY - currentY) * 0.08;
+
+        cursorGlow.style.left = currentX + "px";
+        cursorGlow.style.top = currentY + "px";
+
+        requestAnimationFrame(animateCursor);
+      }
+
+      animateCursor();
     </script>
   </body>
 </html>
